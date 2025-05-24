@@ -9,6 +9,7 @@ const queries = {
     // Mirar BBDD para ver que columna podria coger para editar
     deleteMatch: 'DELETE FROM matches WHERE fixture_id = $1',
 
+    getStandings: 'SELECT * FROM standings',
     // create....: nuevo equipo?
 };
 
