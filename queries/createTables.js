@@ -37,8 +37,10 @@ const createTables = async () => {
                 fixture_id SERIAL PRIMARY KEY,
                 home_team VARCHAR(100) NOT NULL,
                 home_team_id INTEGER NOT NULL,
+                home_team_logo VARCHAR(400) NOT NULL,
                 away_team VARCHAR(100) NOT NULL,
                 away_team_id INTEGER NOT NULL,
+                away_team_logo VARCHAR(400) NOT NULL,
                 home_score INTEGER,
                 away_score INTEGER,
                 date TIMESTAMP WITH TIME ZONE NOT NULL

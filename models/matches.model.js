@@ -5,9 +5,9 @@ const queries = require('../queries/api.queries'); // Consultas SQL
 const getAllMatches = async () => {
     let client, result;
     try {
-        client = await pool.connect(); 
-        const data = await client.query(queries.getAllmatches); 
-        result = data.rows; 
+        client = await pool.connect();
+        const data = await client.query(queries.getAllmatches);
+        result = data.rows;
     } catch (error) {
         console.log(error);
         throw error;
@@ -19,15 +19,17 @@ const getAllMatches = async () => {
 
 //POST Crear un partido
 const createMatch = async (match) => {
-    const {home_team, home_team_id, away_team, away_team_id, home_score, away_score, date} = match;
+    const { home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date } = match;
     let client, result;
     try {
         client = await pool.connect();
         const data = await client.query(queries.createMatch, [
             home_team,
             home_team_id,
+            home_team_logo,
             away_team,
             away_team_id,
+            away_team_logo,
             home_score,
             away_score,
             date
