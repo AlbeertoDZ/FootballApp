@@ -1,6 +1,5 @@
 const db = require('../config/db_pgsql'); //
 const Matches = require('../models/matches.model'); // Modelo de partidos
-const bcrypt = require('bcrypt');
 
 const getAllMatches = async (req, res) => {
     try {
@@ -16,8 +15,10 @@ const createMatch = async (req, res) => {
     if (
         "home_team" in newMatch &&
         "home_team_id" in newMatch &&
+        "home_team_logo" in newMatch &&
         "away_team" in newMatch &&
         "away_team_id" in newMatch &&
+        "away_team_logo" in newMatch &&
         "home_score" in newMatch &&
         "away_score" in newMatch &&
         "date" in newMatch

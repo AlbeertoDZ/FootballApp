@@ -24,29 +24,43 @@ const queries = {
   `,
 
   matches: `
-  -- 1. Burnley vs Manchester City
-        INSERT INTO matches (fixture_id, home_team, home_team_id, away_team, away_team_id, home_score, away_score, date)
-        VALUES (1035037, 'Burnley', 44, 'Manchester City', 50, 0, 3, '2023-08-11T19:00:00+00:00');
+  INSERT INTO matches (
+  fixture_id, home_team, home_team_id, home_team_logo,
+  away_team, away_team_logo, away_team_id,
+  home_score, away_score, date
+)
+VALUES
+  (
+    1035037, 'Burnley', 44, 'https://media.api-sports.io/football/teams/44.png',
+    'Manchester City', 'https://media.api-sports.io/football/teams/50.png', 50,
+    0, 3, '2023-08-11T19:00:00+00:00'
+  ),
+  (
+    1035038, 'Arsenal', 42, 'https://media.api-sports.io/football/teams/42.png',
+    'Nottingham Forest', 'https://media.api-sports.io/football/teams/65.png', 65,
+    2, 1, '2023-08-12T11:30:00+00:00'
+  ),
+  (
+    1035039, 'Bournemouth', 35, 'https://media.api-sports.io/football/teams/35.png',
+    'West Ham', 'https://media.api-sports.io/football/teams/48.png', 48,
+    1, 1, '2023-08-12T14:00:00+00:00'
+  ),
+  (
+    1035041, 'Everton', 45, 'https://media.api-sports.io/football/teams/45.png',
+    'Fulham', 'https://media.api-sports.io/football/teams/36.png', 36,
+    0, 1, '2023-08-12T14:00:00+00:00'
+  ),
+  (
+    1035040, 'Brighton', 51, 'https://media.api-sports.io/football/teams/51.png',
+    'Luton', 'https://media.api-sports.io/football/teams/1359.png', 1359,
+    4, 1, '2023-08-12T14:00:00+00:00'
+  ),
+  (
+    1035042, 'Sheffield Utd', 62, 'https://media.api-sports.io/football/teams/62.png',
+    'Crystal Palace', 'https://media.api-sports.io/football/teams/52.png', 52,
+    0, 1, '2023-08-12T14:00:00+00:00'
+  );
 
-  -- 2. Arsenal vs Nottingham Forest
-        INSERT INTO matches (fixture_id, home_team, home_team_id, away_team, away_team_id, home_score, away_score, date)
-        VALUES (1035038, 'Arsenal', 42, 'Nottingham Forest', 65, 2, 1, '2023-08-12T11:30:00+00:00');
-
-  -- 3. Bournemouth vs West Ham
-        INSERT INTO matches (fixture_id, home_team, home_team_id, away_team, away_team_id, home_score, away_score, date)
-        VALUES (1035039, 'Bournemouth', 35, 'West Ham', 48, 1, 1, '2023-08-12T14:00:00+00:00');
-
-  -- 4. Everton vs Fulham
-        INSERT INTO matches (fixture_id, home_team, home_team_id, away_team, away_team_id, home_score, away_score, date)
-        VALUES (1035041, 'Everton', 45, 'Fulham', 36, 0, 1, '2023-08-12T14:00:00+00:00');
-
-  -- 5. Brighton vs Luton
-        INSERT INTO matches (fixture_id, home_team, home_team_id, away_team, away_team_id, home_score, away_score, date)
-        VALUES (1035040, 'Brighton', 51, 'Luton', 1359, 4, 1, '2023-08-12T14:00:00+00:00');
-
-  -- 6. Sheffield Utd vs Crystal Palace
-        INSERT INTO matches (fixture_id, home_team, home_team_id, away_team, away_team_id, home_score, away_score, date)
-        VALUES (1035042, 'Sheffield Utd', 62, 'Crystal Palace', 52, 0, 1, '2023-08-12T14:00:00+00:00');
   `
 };
 module.exports = queries;
