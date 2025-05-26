@@ -8,13 +8,23 @@ const getAllMatches = async () => {
         client = await pool.connect();
         const data = await client.query(queries.getAllmatches);
         result = data.rows;
+        
+
+        for (let i = 0; i < result.length; i++) {
+            let element = result[i];
+            const date = element.date;
+            const dateObject = new Date(date);
+            const dateFormated = dateObject.getDate() + "/" + dateObject.getMonth() + "/" + dateObject.getFullYear();
+            element.date = dateFormated;
+        }
+        return result;
     } catch (error) {
         console.log(error);
         throw error;
     } finally {
         client.release();
     }
-    return result;
+    
 }
 
 //POST Crear un partido

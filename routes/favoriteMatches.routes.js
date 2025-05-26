@@ -4,5 +4,7 @@ const favoriteMatchesControllers = require('../controllers/favoriteMatches.contr
 
 //Obtener todos los partidos favoritos
 router.get('/', favoriteMatchesControllers.getAllFavoriteMatches);
+//Crear un favorito
+router.post('/', favoriteMatchesControllers.createFavoriteMatch);
 
 module.exports = router;

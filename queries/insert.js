@@ -24,43 +24,105 @@ const queries = {
   `,
 
   matches: `
-  INSERT INTO matches (
-  fixture_id, home_team, home_team_id, home_team_logo,
-  away_team, away_team_logo, away_team_id,
-  home_score, away_score, date
-)
-VALUES
-  (
-    1035037, 'Burnley', 44, 'https://media.api-sports.io/football/teams/44.png',
-    'Manchester City', 'https://media.api-sports.io/football/teams/50.png', 50,
-    0, 3, '2023-08-11T19:00:00+00:00'
-  ),
-  (
-    1035038, 'Arsenal', 42, 'https://media.api-sports.io/football/teams/42.png',
-    'Nottingham Forest', 'https://media.api-sports.io/football/teams/65.png', 65,
-    2, 1, '2023-08-12T11:30:00+00:00'
-  ),
-  (
-    1035039, 'Bournemouth', 35, 'https://media.api-sports.io/football/teams/35.png',
-    'West Ham', 'https://media.api-sports.io/football/teams/48.png', 48,
-    1, 1, '2023-08-12T14:00:00+00:00'
-  ),
-  (
-    1035041, 'Everton', 45, 'https://media.api-sports.io/football/teams/45.png',
-    'Fulham', 'https://media.api-sports.io/football/teams/36.png', 36,
-    0, 1, '2023-08-12T14:00:00+00:00'
-  ),
-  (
-    1035040, 'Brighton', 51, 'https://media.api-sports.io/football/teams/51.png',
-    'Luton', 'https://media.api-sports.io/football/teams/1359.png', 1359,
-    4, 1, '2023-08-12T14:00:00+00:00'
-  ),
-  (
-    1035042, 'Sheffield Utd', 62, 'https://media.api-sports.io/football/teams/62.png',
-    'Crystal Palace', 'https://media.api-sports.io/football/teams/52.png', 52,
-    0, 1, '2023-08-12T14:00:00+00:00'
-  );
+  INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Burnley', 44, 'https://media.api-sports.io/football/teams/44.png',
+    'Manchester City', 50, 'https://media.api-sports.io/football/teams/50.png',
+    0, 3, '2023-08-11 19:00:00');
 
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Arsenal', 42, 'https://media.api-sports.io/football/teams/42.png',
+    'Nottingham Forest', 65, 'https://media.api-sports.io/football/teams/65.png',
+    2, 1, '2023-08-12 11:30:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Bournemouth', 35, 'https://media.api-sports.io/football/teams/35.png',
+    'West Ham', 48, 'https://media.api-sports.io/football/teams/48.png',
+    1, 1, '2023-08-12 14:00:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Everton', 45, 'https://media.api-sports.io/football/teams/45.png',
+    'Fulham', 36, 'https://media.api-sports.io/football/teams/36.png',
+    0, 1, '2023-08-12 14:00:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Brighton', 51, 'https://media.api-sports.io/football/teams/51.png',
+    'Luton', 1359, 'https://media.api-sports.io/football/teams/1359.png',
+    4, 1, '2023-08-12 14:00:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Sheffield Utd', 62, 'https://media.api-sports.io/football/teams/62.png',
+    'Crystal Palace', 52, 'https://media.api-sports.io/football/teams/52.png',
+    0, 1, '2023-08-12 14:00:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Newcastle', 34, 'https://media.api-sports.io/football/teams/34.png',
+    'Aston Villa', 66, 'https://media.api-sports.io/football/teams/66.png',
+    5, 1, '2023-08-12 16:30:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Brentford', 55, 'https://media.api-sports.io/football/teams/55.png',
+    'Tottenham', 47, 'https://media.api-sports.io/football/teams/47.png',
+    2, 2, '2023-08-13 13:00:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Chelsea', 49, 'https://media.api-sports.io/football/teams/49.png',
+    'Liverpool', 40, 'https://media.api-sports.io/football/teams/40.png',
+    1, 1, '2023-08-13 15:30:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Manchester United', 33, 'https://media.api-sports.io/football/teams/33.png',
+    'Wolves', 39, 'https://media.api-sports.io/football/teams/39.png',
+    1, 0, '2023-08-14 19:00:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Nottingham Forest', 65, 'https://media.api-sports.io/football/teams/65.png',
+    'Sheffield Utd', 62, 'https://media.api-sports.io/football/teams/62.png',
+    2, 1, '2023-08-18 18:45:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Fulham', 36, 'https://media.api-sports.io/football/teams/36.png',
+    'Brentford', 55, 'https://media.api-sports.io/football/teams/55.png',
+    0, 3, '2023-08-19 14:00:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Wolves', 39, 'https://media.api-sports.io/football/teams/39.png',
+    'Brighton', 51, 'https://media.api-sports.io/football/teams/51.png',
+    1, 4, '2023-08-19 14:00:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Liverpool', 40, 'https://media.api-sports.io/football/teams/40.png',
+    'Bournemouth', 35, 'https://media.api-sports.io/football/teams/35.png',
+    3, 1, '2023-08-19 14:00:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Tottenham', 47, 'https://media.api-sports.io/football/teams/47.png',
+    'Manchester United', 33, 'https://media.api-sports.io/football/teams/33.png',
+    2, 0, '2023-08-19 16:30:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Manchester City', 50, 'https://media.api-sports.io/football/teams/50.png',
+    'Newcastle', 34, 'https://media.api-sports.io/football/teams/34.png',
+    1, 0, '2023-08-19 19:00:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Aston Villa', 66, 'https://media.api-sports.io/football/teams/66.png',
+    'Everton', 45, 'https://media.api-sports.io/football/teams/45.png',
+    4, 0, '2023-08-20 13:00:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'West Ham', 48, 'https://media.api-sports.io/football/teams/48.png',
+    'Chelsea', 49, 'https://media.api-sports.io/football/teams/49.png',
+    3, 1, '2023-08-20 15:30:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Crystal Palace', 52, 'https://media.api-sports.io/football/teams/52.png',
+    'Arsenal', 42, 'https://media.api-sports.io/football/teams/42.png',
+    0, 1, '2023-08-21 19:00:00');
+
+INSERT INTO matches (home_team, home_team_id, home_team_logo, away_team, away_team_id, away_team_logo, home_score, away_score, date) VALUES (
+    'Chelsea', 49, 'https://media.api-sports.io/football/teams/49.png',
+    'Luton', 1359, 'https://media.api-sports.io/football/teams/1359.png',
+    3, 0, '2023-08-25 19:00:00');
   `
 };
 module.exports = queries;
