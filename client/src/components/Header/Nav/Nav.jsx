@@ -14,6 +14,12 @@ const Nav = () => {
       <li>
         <Link to="/standings">Clasificación</Link>
       </li>
+      <li>
+        <Link to="/favoritematches">Partidos Favoritos</Link>
+      </li>
+      <li>
+        <Link to="/createfavoritematches">Crear Partido Favorito</Link>
+      </li>
     </ul>
   </nav>
   </>;
