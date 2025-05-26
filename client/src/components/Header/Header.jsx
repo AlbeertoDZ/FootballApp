@@ -3,9 +3,9 @@ import Nav from "./Nav/Nav.jsx";
 
 
 const Header = () => {
-  return <div>
+  return <>
     <Nav />
-  </div>;
+  </>;
 };
 
 export default Header;

@@ -11,6 +11,7 @@ const Main = () => {
       <Route path="/new" element={<MatchesForm/>}/>
       <Route path="/standings" element={<Standings/>}/>
       <Route path="/matches" element={<Matches/>}/>
+      {/* Agregar favoritos  */}
     </Routes> 
     </main>;
 };
