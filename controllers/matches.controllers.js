@@ -23,23 +23,23 @@ const createMatch = async (req, res) => {
         "away_score" in newMatch &&
         "date" in newMatch
     )
-    try {
-        const match = await Matches.createMatch(newMatch);
-        res.status(201).json({ message: 'Partido creado correctamente', match });
-    } catch (error) {
-        res.status(500).json({ error: 'Error al crear el partido' });
-    }
+        try {
+            const match = await Matches.createMatch(newMatch);
+            res.status(201).json({ message: 'Partido creado correctamente', match });
+        } catch (error) {
+            res.status(500).json({ error: 'Error al crear el partido' });
+        }
     else {
         res.status(400).json({ error: 'Faltan datos para crear el partido' });
     }
 }
 const deleteMatch = async (req, res) => {
-    const {fixture_id} = req.params;
+    const { fixture_id } = req.params;
 
     try {
         const response = await Matches.deleteMatch(fixture_id);
         if (response) {
-            res.status(200).json({ 
+            res.status(200).json({
                 message: 'Partido eliminado correctamente',
                 items_deleted: response,
                 data: fixture_id
@@ -49,7 +49,7 @@ const deleteMatch = async (req, res) => {
         }
     } catch (error) {
         res.status(500).json({ error: 'Error al eliminar el partido' });
-        
+
     }
 }
 module.exports = {
