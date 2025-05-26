@@ -12,6 +12,8 @@ const queries = {
     getStandings: 'SELECT * FROM standings',
     
     // Agregar favoritos
+    getFavoriteMatches: 'SELECT * FROM favorite_matches WHERE id_user = 2',
+    addFavoriteMatch: 'INSERT INTO favorite_matches (id_user, fixture_id) VALUES (2, $1)'
 };
 
 module.exports = queries;
