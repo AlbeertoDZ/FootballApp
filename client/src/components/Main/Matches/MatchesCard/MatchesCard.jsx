@@ -1,4 +1,5 @@
 import React from "react";
+import "./MatchesCard.css";
 
 const MatchesCard = ({match}) => {
   // console.log(match);

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./MatchesForm.css";
 
 const MatchesForm = () => {
 
@@ -86,7 +87,7 @@ const MatchesForm = () => {
         <label htmlFor="date">Fecha</label>
         <input type="date" name="date" id="date" value={values.date} onChange={handleChange} />
       </div>
-      <button type="submit">Guardar Partido</button>
+      <button type="submit" className="btn-submit">Guardar Partido</button>
     </form>
   </section>;
 };

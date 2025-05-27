@@ -16,6 +16,13 @@ const getAllFavoriteMatches = async () => {
             const getMatchById = await client.query (queries.getMatchesById, [id]);
             const row = getMatchById.rows;
             const matchResult = row[0];
+
+            //Formatear la fecha ya
+            if (matchResult && matchResult.date) {
+                const dateObject = new Date(matchResult.date);
+                matchResult.date = dateObject.getDate() + "/" + (dateObject.getMonth() + 1) + "/" + dateObject.getFullYear();
+            }
+
             matches.push(matchResult)
         }
         return matches;

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios"
+import "./FavoriteMatchesForm.css";
 
 const FavoriteMatchesForm = () => {
 
@@ -39,7 +40,7 @@ const FavoriteMatchesForm = () => {
         <label htmlFor="fixtureID">ID del partido</label>
         <input type="number" name="fixture_id" id="fixture_ID" placeholder="Introduce ID de partido" value={values.fixture_id} onChange={handleChange} />
       </div>
-      <button type="submit">Guardar Favorito</button>
+      <button type="submit" className="btn-submit">Guardar Favorito</button>
     </form>
     </section>;
 

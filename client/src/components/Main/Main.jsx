@@ -5,9 +5,11 @@ import Matches from "./Matches/Matches.jsx";
 import MatchesForm from "./MatchesForm/MatchesForm.jsx";
 import FavoriteMatches from "./FavoriteMatches/FavoriteMatches.jsx"
 import FavoriteMatchesForm from "./FavoriteMatchesForm/FavoriteMatchesForm.jsx";
+// import "../../styles/styles.scss"
+import "./Main.css";
 
 const Main = () => {
-  return <main>
+  return <>
     <Routes>
       <Route path="/" element={<Navigate to="/matches"/>}/>
       <Route path="/new" element={<MatchesForm/>}/>
@@ -16,7 +18,7 @@ const Main = () => {
       <Route path="/favoritematches" element={<FavoriteMatches/>}/>
       <Route path="/createfavoritematches" element={<FavoriteMatchesForm/>}/>
     </Routes> 
-    </main>;
+    </>;
 };
 
 export default Main;
