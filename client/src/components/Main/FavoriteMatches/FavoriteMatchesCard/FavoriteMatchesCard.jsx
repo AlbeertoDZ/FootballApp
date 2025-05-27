@@ -1,4 +1,5 @@
 import React from "react";
+import "./FavoriteMatchesCard.css";
 
 const FavoriteMatchesCard = ({favoriteMatch}) => {
   return <article className="favorite-card">

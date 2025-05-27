@@ -20,15 +20,19 @@ const Matches = () => {
     fetchMatches();
   }, []);
   
-  const paintMatches = () => {
+ const paintMatches = () => {
   if (matchesList.length === 0) {
     return <p>No hay partidos disponibles</p>;
   }
-  return matchesList.map((match) => {
-    return <MatchesCard key={uuidv4()} match={match} />;
-    });
-  }
 
+  return (
+    <div className="matches-list">
+      {matchesList.map((match) => {
+        return <MatchesCard key={uuidv4()} match={match} />;
+      })}
+    </div>
+  );
+};
   
   // console.log(matchesList);
   return <>

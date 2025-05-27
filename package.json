@@ -17,9 +17,11 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
+    "normalize.css": "^8.0.1",
     "path": "^0.12.7",
     "pg": "^8.16.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "sass": "^1.89.0"
   },
   "devDependencies": {
     "concurrently": "^7.6.0",

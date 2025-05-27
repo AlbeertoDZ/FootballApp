@@ -1,0 +1,119 @@
+:root {
+    --ash-gray: #bfc3baff;
+    --silver: #a9aca9ff;
+    --eggplant: #60495aff;
+    --english-violet: #3f3244ff;
+    --dark-purple: #2f2235ff;
+}
+
+body {
+    background: linear-gradient(135deg, var(--ash-gray) 0%, var(--eggplant) 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.form-matches {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.form-matches h2 {
+    color: var(--ash-gray); 
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.form-matches form {
+    background: linear-gradient(120deg, rgba(191,195,186,0.85) 0%, rgba(96,73,90,0.85) 100%);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(63,50,68,0.25);
+    padding: 3rem; 
+    width: 100%;
+    max-width: 700px;   
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    backdrop-filter: blur(2px);
+}
+
+.form-matches label {
+    color: var(--english-violet);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    display: block;
+    text-align: center;
+}
+
+.form-matches input[type="text"],
+.form-matches input[type="number"],
+.form-matches input[type="url"],
+.form-matches input[type="date"] {
+    width: 95%;
+    display:block;
+    margin: 0.2rem auto 0 auto;
+    padding: 0.7rem 1rem;
+    border: 1.5px solid var(--silver);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.7);
+    color: var(--dark-purple);
+    font-size: 1rem;
+    transition: border 0.2s;
+    margin-top: 0.2rem;
+}
+
+.form-matches input:focus {
+    border: 1.5px solid var(--eggplant);
+    outline: none;
+    background: rgba(255,255,255,0.9);
+}
+
+.btn-submit {
+    margin-top: 1rem;
+    padding: 0.9rem 0;
+    background: linear-gradient(90deg, var(--eggplant) 40%, var(--dark-purple) 100%);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 16px 0 rgba(47,34,53,0.15);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(90deg, var(--dark-purple) 40%, var(--eggplant) 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 24px 0 rgba(63,50,68,0.25);
+}
+
+.success-message {
+    color: #00ff0d;
+    background: rgba(191,195,186,0.3);
+    border: 4px solid #2e7d32;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+   .form-matches form {
+        padding: 1.2rem 0.5rem;
+        max-width: 98vw;
+    }
+    .form-matches input[type="text"],
+    .form-matches input[type="number"],
+    .form-matches input[type="url"],
+    .form-matches input[type="date"] {
+        width: 98%;
+    }
+}
+

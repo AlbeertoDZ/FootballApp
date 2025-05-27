@@ -1,18 +1,21 @@
 import React from "react";
+import "./StandingsCard.css";
 
 const StandingsCard = ({standings}) => {
-  return <article className="standings-card">
-    <div>
-      <p>{standings.position}</p>
-      <img src={standings.logo} alt="logo-team" />
-      <p>{standings.team_name}</p>
-      <p>{standings.points}</p>
-      <p>{standings.games_played}</p>
-      <p>{standings.games_win}</p>
-      <p>{standings.games_draw}</p>
-      <p>{standings.games_lost}</p>
-    </div>
-    </article>;
+  return (
+    <article className="standings-row">
+      <div className="team-position">{standings.position}</div>
+      <div>
+        <img src={standings.logo} alt="logo-team" className="team-logo" />
+      </div>
+      <div className="team-name">{standings.team_name}</div>
+      <div className="team-points">{standings.points}</div>
+      <div className="team-played">{standings.games_played}</div>
+      <div className="team-win">{standings.games_win}</div>
+      <div className="team-draw">{standings.games_draw}</div>
+      <div className="team-lost">{standings.games_lost}</div>
+    </article>
+  );
 };
 
 export default StandingsCard;
