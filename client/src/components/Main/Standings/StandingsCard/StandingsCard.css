@@ -1,0 +1,104 @@
+.standings-row {
+  display: grid;
+  grid-template-columns: 40px 50px 1.5fr repeat(5, 60px);
+  align-items: center;
+  padding: 12px 0;
+  color: #e7eaf3;
+  font-size: 1rem;
+  border-bottom: 1px solid #23272f;
+  transition: background 0.2s;
+  background: #181c24;
+}
+
+.standings-row:hover {
+  background: #23272f;
+  color: #fff;
+}
+
+.team-position {
+  padding-left: 20px; 
+}
+
+.team-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px #fff8);
+  padding-left: 10px;
+}
+
+.team-name {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding-left: 60px; 
+}
+
+.team-points {
+  padding-left: 20px; 
+}
+
+.team-played {
+  padding-left: 20px; 
+}
+
+.team-win {
+  padding-left: 20px; 
+}
+
+.team-draw {
+  padding-left: 20px; 
+}
+
+.team-lost {
+  padding-left: 20px; 
+}
+
+@media (max-width: 900px) {
+  .standings-row {
+    grid-template-columns: 30px 36px 1fr repeat(5, 38px);
+    font-size: 0.95rem;
+    padding: 8px 0;
+  }
+  .team-name {
+    padding-left: 20px;
+    font-size: 0.95rem;
+  }
+  .team-logo {
+    width: 24px;
+    height: 24px;
+    padding-left: 4px;
+  }
+  .team-position,
+  .team-points,
+  .team-played,
+  .team-win,
+  .team-draw,
+  .team-lost {
+    padding-left: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .standings-row {
+    grid-template-columns: 22px 28px 1fr repeat(5, 24px);
+    font-size: 0.85rem;
+    padding: 4px 0;
+  }
+  .team-name {
+    padding-left: 8px;
+    font-size: 0.85rem;
+  }
+  .team-logo {
+    width: 18px;
+    height: 18px;
+    padding-left: 2px;
+  }
+  .team-position,
+  .team-points,
+  .team-played,
+  .team-win,
+  .team-draw,
+  .team-lost {
+    padding-left: 2px;
+  }
+}
